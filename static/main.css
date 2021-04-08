@@ -1,0 +1,64 @@
+h2 {
+    color: #00887A;
+    text-align: center;
+    font-size: 50px;
+    padding: 4px;
+     border: none;
+}
+h3 {
+    color: rgba(0, 136, 122, 0.9);
+    text-align: center;
+    font-size: 25px;
+    padding: 2px;
+     border: none;
+}
+h4 {
+    font-size: 30px;
+    text-align: center;
+    color: #17252A:
+    padding: 2px;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+hr {
+    color: #DEF2F1;
+}
+
+input[type=text] {
+    width: 20%;
+    padding: 8px 8px;
+    margin: 10px 0;
+    color: #1d3557;
+    background-color: #DEF2F1;
+    border-radius: 10px;
+    font-size: 16px;
+    min-width: 20%;
+}
+
+input[type=submit] {
+    width: 20%;
+    color: White;
+    padding: 12px 12px;
+    border: 1px;
+    border-radius: 10px;
+    background-color: #00887A;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    min-width: 35%
+}
+input[type=submit]:hover {
+    background-color: rgba(0, 136, 122, 0.7);
+    color: rgba(0, 0, 0, 0.6)
+}
+
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: White;
+    padding: 4x;
+    font-size: 20px;
+    text-align: center;
+    color: Black
+}
