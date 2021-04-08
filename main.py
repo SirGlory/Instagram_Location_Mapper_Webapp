@@ -6,6 +6,7 @@ from wtforms import Form, StringField, SubmitField
 from geo import Geopoint
 from geopy.geocoders import Nominatim
 from scrape import Scrape
+import os
 
 # Create app instance
 app = Flask(__name__)
@@ -22,6 +23,12 @@ class HomePage(MethodView):
 class MapPage(MethodView):
 
     def post(self):
+        if os.path.exists("templates\mapped_locations.html"):
+            print("mapped_locations.html, file deleted!")
+            os.remove("templates\mapped_locations.html")
+        else:
+            print("mapped_locations.html does not exist")
+        
         handle_form = HandleForm(request.form)
         handle = str(handle_form.handle.data)
         locations = Scrape(handle).get_locations()
