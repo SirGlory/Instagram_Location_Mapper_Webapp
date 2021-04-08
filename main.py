@@ -1,3 +1,4 @@
+import os
 from flask.views import MethodView
 from flask import Flask, render_template, request
 from flask_styleguide import Styleguide
@@ -6,14 +7,14 @@ from wtforms import Form, StringField, SubmitField
 from geo import Geopoint
 from geopy.geocoders import Nominatim
 from scrape import Scrape
-import os
+
 
 # Create app instance
 app = Flask(__name__)
 styleguide = Styleguide(app)
 
-class HomePage(MethodView):
 
+class HomePage(MethodView):
 
     def get(self):
         handle_form = HandleForm()
@@ -36,7 +37,7 @@ class MapPage(MethodView):
             os.remove(map_name)
         else:
             print(f"{map_name} does not exist")
-            
+
         for i in range(0, len(locations), 1):
             # Convert address to coordinates
             locator = Nominatim(user_agent="myGeocoder")
@@ -82,5 +83,3 @@ app.add_url_rule('/about_page',
 
 if __name__ == '__main__':
     app.run()
-
-
