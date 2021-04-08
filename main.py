@@ -68,7 +68,7 @@ app.add_url_rule('/map_page',
                  view_func=MapPage.as_view('map_page'))
 app.add_url_rule('/about_page',
                  view_func=AboutPage.as_view('about_page'))
-
-app.run()
+if __name__ == '__main__':
+    app.run()
 
 

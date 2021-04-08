@@ -1,2 +1,3 @@
-web: gunicorn app:flaskapp --log-file=-
+web: gunicorn main:app --log-file=-
+
 
