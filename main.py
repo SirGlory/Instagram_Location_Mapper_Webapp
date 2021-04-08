@@ -25,7 +25,7 @@ class MapPage(MethodView):
         handle_form = HandleForm(request.form)
         handle = str(handle_form.handle.data)
         locations = Scrape(handle).get_locations()
-        mymap = Map(location=[20, 10], zoom_start=3)
+        mymap = Map(location=[-20, 20], zoom_start=5)
 
         for i in range(0, len(locations), 1):
             # Convert address to coordinates
@@ -44,10 +44,10 @@ class MapPage(MethodView):
                 pass
 
         # Save the Map Instance Into a HTML file
-        mymap.save("templates/mapped_locations.html")
+        mymap.save("templates/map_locations.html")
         print("------------------------------------------")
-        print("Map Created! Check your files for mapped_locations.html")
-        return render_template('mapped_locations.html')
+        print("Map Created! Check your files for map_locations.html")
+        return render_template('map_locations.html')
 
 
 class AboutPage(MethodView):
