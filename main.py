@@ -25,7 +25,7 @@ class MapPage(MethodView):
         handle_form = HandleForm(request.form)
         handle = str(handle_form.handle.data)
         locations = Scrape(handle).get_locations()
-        mymap = Map(location=[20, 10], zoom_start=3)
+        mymap = Map(location=[-20, 20], zoom_start=5)
 
         for i in range(0, len(locations), 1):
             # Convert address to coordinates
