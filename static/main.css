@@ -28,7 +28,7 @@ hr {
 }
 
 input[type=text] {
-    width: 45%;
+    width: 20%;
     padding: 1em 1em;
     margin: 1em 0;
     color: #1d3557;
@@ -39,7 +39,7 @@ input[type=text] {
 }
 
 input[type=submit] {
-    width: 55%;
+    width: 30%;
     color: White;
     padding: 1em 1em;
     border: 0.2em;
