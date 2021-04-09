@@ -39,7 +39,7 @@ class MapPage(MethodView):
                 locationi = locator.geocode(locations[i])
                 lat = locationi.latitude
                 lon = locationi.longitude
-                p = Popup(locations[i],min_width=380,max_width=400)
+                p = Popup(locations[i],max_width=400)
                 mk = Marker([lat, lon],p)
                 mc.add_child(mk)
             except:
