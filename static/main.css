@@ -13,14 +13,14 @@ h3 {
      border: none;
 }
 h4 {
-    font-size: 2em;
+    font-size: 1.75em;
     text-align: center;
     color: #17252A:
     padding: 0.2em;
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: center;
 }
 hr {
@@ -28,18 +28,19 @@ hr {
 }
 
 input[type=text] {
-    width: 20%;
-    padding: 1em 1em;
+    width: auto;
+    padding: 0.75em 0.75em;
     margin: 1em 0;
     color: #1d3557;
     background-color: #DEF2F1;
-    border-radius: 1em;
-    font-size: 1em;
-    min-width: 45%;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    min-width: 20%;
+    max-width: 25%
 }
 
 input[type=submit] {
-    width: 30%;
+    width: auto;
     color: White;
     padding: 1em 1em;
     border: 0.2em;
@@ -47,7 +48,8 @@ input[type=submit] {
     background-color: #00887A;
     font-size: 1.1em;
     transition-duration: 0.4s;
-    min-width: 55%
+    min-width: 40%;
+    max-width: 50%
 }
 input[type=submit]:hover {
     background-color: rgba(0, 136, 122, 0.7);
