@@ -1,58 +1,39 @@
 from flask.views import MethodView
 from flask import Flask, render_template, request
 from flask_styleguide import Styleguide
-from folium import Map, Marker, Popup, PolyLine
-from folium.plugins import MarkerCluster
+from folium import Map, PolyLine
 from wtforms import Form, StringField, SubmitField
-from geo import Geopoint
-from geopy.geocoders import Nominatim
+from coords import Coords
 from scrape import Scrape
 
 # Create app instance
 app = Flask(__name__)
 styleguide = Styleguide(app)
 
+#Pages
 class HomePage(MethodView):
 
     def get(self):
         handle_form = HandleForm()
         return render_template('home.html', handleform=handle_form)
 
-#Pages
+
 class MapPage(MethodView):
-    # posts input from home page
+    # post input from home page
     def post(self):
-        # draw inputs, get hanflem scrape location addresses,
-        # create map and marker custer instances
+        # draw inputs, get handle, scrape location addresses,
+        # create map and marker cluster instances, generate coordinates
         handle_form = HandleForm(request.form)
         handle = str(handle_form.handle.data)
         locations = Scrape(handle).get_locations()
         my_map = Map(location=[-22.5, 24], zoom_start=4)
-        mc = MarkerCluster()
-        coords = []
-        
-       # For each location convert address to coordinates, create poup and marker,
-       # add to marker cluster
-        for i in range(0, len(locations), 1):
-            # Convert address to coordinates
-            locator = Nominatim(user_agent="myGeocoder")
-            try:
-                locationi = locator.geocode(locations[i])
-                lat = locationi.latitude
-                lon = locationi.longitude
-                lat_lon=(lat,lon)
-                p = Popup(locations[i],max_width=400)
-                mk = Marker([lat, lon],p)
-                mc.add_child(mk)
-                coords.append(lat_lon)
-            except:
-                pass
-            
+        coordinates = Coords(locations)
+
         # Add Polyline
-        polyline = PolyLine(coords, color="red", weight=2, opacity=0.7)
+        polyline = PolyLine(coordinates.get_coords()[1], color="red", weight=2, opacity=0.7)
         polyline.add_to(my_map)        
-        # Add marker cluster
-        my_map.add_child(mc)
+        # Add Marker Cluster
+        my_map.add_child(coordinates.get_coords()[0])
         # Save the Map Instance Into a HTML file
         my_map.save("templates/map_locations.html")
         print("------------------------------------------")
