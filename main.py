@@ -2,6 +2,7 @@ from flask.views import MethodView
 from flask import Flask, render_template, request
 from flask_styleguide import Styleguide
 from folium import Map, Marker, Popup
+from folium.plugins import MarkerCluster
 from wtforms import Form, StringField, SubmitField
 from geo import Geopoint
 from geopy.geocoders import Nominatim
