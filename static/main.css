@@ -59,7 +59,7 @@ input[type=submit]:hover {
 body {
     font-family: Tahoma, Verdana, sans-serif;
     background-color: White;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     font-size: 1.25em;
     text-align: center;
     color: Black
