@@ -28,9 +28,13 @@ class Scrape:
                 l.append(xx)
             else:
                 pass
+            
+        reversed_l = l[::-1]
         print(l)
         print(base_url)
-        return l
+        return reversed_l # Revered location order. scraping puts newest frist,
+        #return l         # but to plot journey we would want oldest post as starting point
+        
 
 
 if __name__ == "__main__":
