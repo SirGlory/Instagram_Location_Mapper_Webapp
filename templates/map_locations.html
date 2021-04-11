@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e156c1987c1e4f41a4a2cf96782ae83c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e156c1987c1e4f41a4a2cf96782ae83c" ></div>
+        
+</body>
+<script>    
+    
+            var map_e156c1987c1e4f41a4a2cf96782ae83c = L.map(
+                "map_e156c1987c1e4f41a4a2cf96782ae83c",
+                {
+                    center: [-22.5, 24.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fa8deffb43a3410c987dec27a5dbfd48 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e156c1987c1e4f41a4a2cf96782ae83c);
+        
+    
+            var poly_line_80f32d2a8d3d4ac1b64014412a6103d8 = L.polyline(
+                [[-25.999262, 28.125912], [-28.5175205, 20.069182129926723], [-27.663224800000002, 17.780115582608694], [-27.6101636, 17.6060746], [-26.6500086, 15.157266], [-24.4910839, 15.8032097]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_e156c1987c1e4f41a4a2cf96782ae83c);
+        
+    
+            var marker_cluster_91de1e9e0101474d9fc307ec6d5a9a11 = L.markerClusterGroup(
+                {}
+            );
+            map_e156c1987c1e4f41a4a2cf96782ae83c.addLayer(marker_cluster_91de1e9e0101474d9fc307ec6d5a9a11);
+        
+    
+            var marker_5c2ac7d5fcd44e2ab3c4451de706f861 = L.marker(
+                [-25.999262, 28.125912],
+                {}
+            ).addTo(marker_cluster_91de1e9e0101474d9fc307ec6d5a9a11);
+        
+    
+        var popup_5a8c1876e45a4ed39453a17124589af8 = L.popup({"maxWidth": 400});
+
+        
+            var html_5cb6ee5eae944acba5a944e546750a26 = $(`<div id="html_5cb6ee5eae944acba5a944e546750a26" style="width: 100.0%; height: 100.0%;">Midrand, Gauteng</div>`)[0];
+            popup_5a8c1876e45a4ed39453a17124589af8.setContent(html_5cb6ee5eae944acba5a944e546750a26);
+        
+
+        marker_5c2ac7d5fcd44e2ab3c4451de706f861.bindPopup(popup_5a8c1876e45a4ed39453a17124589af8)
+        ;
+
+        
+    
+    
+            var marker_f181d68ecfa64b388e87f5b1a35c2f2b = L.marker(
+                [-28.5175205, 20.069182129926723],
+                {}
+            ).addTo(marker_cluster_91de1e9e0101474d9fc307ec6d5a9a11);
+        
+    
+        var popup_c6d6fc22d8864618bfe4540a43c022a2 = L.popup({"maxWidth": 400});
+
+        
+            var html_2b3cba6d32ac4b10898218d08842aeee = $(`<div id="html_2b3cba6d32ac4b10898218d08842aeee" style="width: 100.0%; height: 100.0%;">Augrabies Falls National Park</div>`)[0];
+            popup_c6d6fc22d8864618bfe4540a43c022a2.setContent(html_2b3cba6d32ac4b10898218d08842aeee);
+        
+
+        marker_f181d68ecfa64b388e87f5b1a35c2f2b.bindPopup(popup_c6d6fc22d8864618bfe4540a43c022a2)
+        ;
+
+        
+    
+    
+            var marker_93d6f9ffb90f41ad99b1f1ca2b9ee3df = L.marker(
+                [-27.663224800000002, 17.780115582608694],
+                {}
+            ).addTo(marker_cluster_91de1e9e0101474d9fc307ec6d5a9a11);
+        
+    
+        var popup_19c1afd83b404161b0ccf22b3b682476 = L.popup({"maxWidth": 400});
+
+        
+            var html_f4e1aee4e3b044179e1a7f1452ebe8bf = $(`<div id="html_f4e1aee4e3b044179e1a7f1452ebe8bf" style="width: 100.0%; height: 100.0%;">Gondwana Cañon Lodge</div>`)[0];
+            popup_19c1afd83b404161b0ccf22b3b682476.setContent(html_f4e1aee4e3b044179e1a7f1452ebe8bf);
+        
+
+        marker_93d6f9ffb90f41ad99b1f1ca2b9ee3df.bindPopup(popup_19c1afd83b404161b0ccf22b3b682476)
+        ;
+
+        
+    
+    
+            var marker_2c15d69cca0c49819730da9f912faa4e = L.marker(
+                [-27.6101636, 17.6060746],
+                {}
+            ).addTo(marker_cluster_91de1e9e0101474d9fc307ec6d5a9a11);
+        
+    
+        var popup_dddb7eaebab34773ab24b011cfd84522 = L.popup({"maxWidth": 400});
+
+        
+            var html_f82a016a3d2b4fd99a652a4df6e96558 = $(`<div id="html_f82a016a3d2b4fd99a652a4df6e96558" style="width: 100.0%; height: 100.0%;">Fish River Canyon</div>`)[0];
+            popup_dddb7eaebab34773ab24b011cfd84522.setContent(html_f82a016a3d2b4fd99a652a4df6e96558);
+        
+
+        marker_2c15d69cca0c49819730da9f912faa4e.bindPopup(popup_dddb7eaebab34773ab24b011cfd84522)
+        ;
+
+        
+    
+    
+            var marker_2cde55ac2de245cdb0c7a5ba64503080 = L.marker(
+                [-26.6500086, 15.157266],
+                {}
+            ).addTo(marker_cluster_91de1e9e0101474d9fc307ec6d5a9a11);
+        
+    
+        var popup_cef8da6f2e4045158c9afa4bee4c5962 = L.popup({"maxWidth": 400});
+
+        
+            var html_51fe71cae90d4cd0a4578685877e7469 = $(`<div id="html_51fe71cae90d4cd0a4578685877e7469" style="width: 100.0%; height: 100.0%;">Luderitz-NAMIBIA</div>`)[0];
+            popup_cef8da6f2e4045158c9afa4bee4c5962.setContent(html_51fe71cae90d4cd0a4578685877e7469);
+        
+
+        marker_2cde55ac2de245cdb0c7a5ba64503080.bindPopup(popup_cef8da6f2e4045158c9afa4bee4c5962)
+        ;
+
+        
+    
+    
+            var marker_066894f143e24d7cbbafa281a086aa62 = L.marker(
+                [-24.4910839, 15.8032097],
+                {}
+            ).addTo(marker_cluster_91de1e9e0101474d9fc307ec6d5a9a11);
+        
+    
+        var popup_14ddcb4df95c4f019fd3d47e9d83e24b = L.popup({"maxWidth": 400});
+
+        
+            var html_4ae60851a4ba4a6b830fcc07a86fffa6 = $(`<div id="html_4ae60851a4ba4a6b830fcc07a86fffa6" style="width: 100.0%; height: 100.0%;">Sossus Oasis Camp Site,  Namibia</div>`)[0];
+            popup_14ddcb4df95c4f019fd3d47e9d83e24b.setContent(html_4ae60851a4ba4a6b830fcc07a86fffa6);
+        
+
+        marker_066894f143e24d7cbbafa281a086aa62.bindPopup(popup_14ddcb4df95c4f019fd3d47e9d83e24b)
+        ;
+
+        
+    
+</script>

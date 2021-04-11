@@ -5,6 +5,7 @@ chardet==4.0.0
 click==7.1.2
 dominate==2.6.0
 Flask==1.1.2
+Flask-Mobility==1.1.0
 Flask-Styleguide==0.4.0
 folium==0.12.1
 geographiclib==1.50

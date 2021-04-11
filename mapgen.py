@@ -9,6 +9,7 @@ class GenMap:
         self.locations = locations
         print(locations)
 
+
     def gen_map(self):
         # Generate map, cluster class and create empty coordinates list
         my_map = Map(location=[-22.5, 24], zoom_start=4)

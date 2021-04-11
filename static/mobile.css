@@ -1,44 +1,49 @@
 h1 {
     color: #00887A;
-    font-size: 3em;
+    font-size: 2.5em;
      border: none;
 }
 
 h2 {
     color: #00887A;
-    font-size: 2em;
+    font-size: 1.75em;
      border: none;
 }
 h3 {
     color: rgba(0, 136, 122, 0.9);
-    font-size: 1.25em;
-    padding: 0.2em;
+    font-size: 2em;
      border: none;
 }
 h4 {
     font-size: 1.5em;
-    color: #17252A:
+    color: #17252A;
+    margin: 0.5em;
+}
+
+h5 {
+    color: rgba(0, 136, 122, 0.9);
+    font-size: 1em;
+    border: none;
     padding: 0.2em;
+    margin: 0.2em;
 }
 
 p {
-    font-size: 1em;
-    text-align: center;
-    padding: 0em 3em;
+    font-size: 0.4em;
 }
 hr {
     color: #DEF2F1;
 }
 
 input[type=text] {
-    width: 15%;
+    width: auto;
     padding: 0.75em 0.75em;
     margin: 1em 0;
     color: #1d3557;
     background-color: #DEF2F1;
     border-radius: 0.5em;
     font-size: 1em;
-    min-width: 10%;
+    min-width: 20%;
     max-width: 25%
 }
 
@@ -50,29 +55,18 @@ input[type=submit] {
     border-radius: 0.5em;
     background-color: #00887A;
     font-size: 1em;
-    transition-duration: 0.4s;
-    min-width: 30%;
-    max-width: 50%;
-}
-
-input[type=submit]:hover {
-    background-color: rgba(0, 136, 122, 0.75);
-    color: Black;
-    cursor: pointer
-}
-
-input[type=submit]:focus{
-    cursor: wait
+    min-width: 50%;
+    max-width: 60%;
 }
 
 body {
     font-family: Tahoma, Verdana, sans-serif;
     background-color: White;
-    padding: 0.5em 1em;
-    font-size: 1.25em;
+    padding: 0em 2em;
+    font-size: 2.4em;
     text-align: center;
     color: Black
 }
 form {
-    font-size: 1.1em;
+    font-size: 1em;
 }
