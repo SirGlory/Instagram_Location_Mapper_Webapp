@@ -26,7 +26,10 @@ class GenMap:
                 lat = locationi.latitude
                 lon = locationi.longitude
                 lat_lon = (lat, lon)
-                p = Popup(self.locations[i], max_width=400)
+                
+                popup_content = f"{self.locations[i]} <br> " \
+                                f"<a href={self.links[i]} > See Post"
+                p = Popup(popup_content, max_width=400)0)
                 mk = Marker([lat, lon], p)
                 mc.add_child(mk)
                 coords.append(lat_lon)
@@ -45,5 +48,5 @@ class GenMap:
 
 
 if __name__ == "__main__":
-    c = GenMap(['Midrand, Gauteng'])
+    c = GenMap(['Midrand, Gauteng'], 'https://www.picuki.com/media/2548099983087509980')
     c.gen_map()
