@@ -17,23 +17,30 @@ class Scrape:
                              'User-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0'})
         c = r.content
         soup = BeautifulSoup(c, "html.parser")
-        all = soup.find_all("span", {"class": "icon-globe-alt"})
-        l = []
+        all_locs = soup.find_all("div", {"class": "photo-location"})
+        all_links = soup.find_all("div", {"class": "photo"})
+        locs = []
+        links = []
 
         # Add unique locations to list
-        for i in range(0,len(all),1):
-            xx = all[i].text
-
-            if xx not in l:
-                l.append(xx)
+        for i in range(0, len(all_locs), 1):
+            xx = all_locs[i].text.replace("\n", "")
+            yy = all_links[i].find('a').get('href')
+            if xx not in locs:
+                locs.append(xx)
+                links.append(yy)
             else:
                 pass
-            
-        reversed_l = l[::-1]
-        print(l)
-        print(base_url)
-        return reversed_l # Revered location order. scraping puts newest frist,
-        #return l         # but to plot journey we would want oldest post as starting point
+
+
+        reversed_locs = locs[::-1]
+        reversed_links = links[::-1]
+        #print(locs)
+        #print(links)
+        #print(base_url)
+        return reversed_locs, reversed_links  # Revered location order. scraping puts newest first,
+        # return l            # but to plot journey we would want oldest post as starting point
+
         
 
 
@@ -42,4 +49,5 @@ if __name__ == "__main__":
     print(handle)
     point1 = Scrape(handle=handle)
     address = point1.get_locations()
-    print(address)
+    print(address[0])
+    print(address[1])
