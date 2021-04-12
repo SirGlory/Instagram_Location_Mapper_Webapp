@@ -29,7 +29,7 @@ class GenMap:
                 
                 popup_content = f"{self.locations[i]} <br> " \
                                 f"<a href={self.links[i]} > See Post"
-                p = Popup(popup_content, max_width=400)0)
+                p = Popup(popup_content, max_width=400)
                 mk = Marker([lat, lon], p)
                 mc.add_child(mk)
                 coords.append(lat_lon)
