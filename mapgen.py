@@ -12,7 +12,7 @@ class GenMap:
 
     def gen_map(self):
         # Generate map, cluster class and create empty coordinates list
-        my_map = Map(location=[-25, 21.5], zoom_start=5)
+        my_map = Map(location=[-25.25, 21.75], zoom_start=5)
         mc = MarkerCluster()
         coords = []
 
