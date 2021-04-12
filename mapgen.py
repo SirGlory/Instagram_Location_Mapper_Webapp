@@ -5,9 +5,9 @@ from geopy.geocoders import Nominatim
 
 class GenMap:
 
-    def __init__(self, locations):
+    def __init__(self, locations, links):
+        self.links = links
         self.locations = locations
-        print(locations)
 
 
     def gen_map(self):
