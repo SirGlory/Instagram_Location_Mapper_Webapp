@@ -30,14 +30,14 @@ class HomePage(MethodView):
 class MapPage(MethodView):
     # post input from home page
     def post(self):
-        # draw inputs, get handle, scrape location addresses,
-
+        # draw inputs, get handle, scrape location addresses
         handle_form = HandleForm(request.form)
         handle = str(handle_form.handle.data)
-        locations = Scrape(handle)
-
+        locations = Scrape(handle).get_locations()[0]
+        links = Scrape(handle).get_locations()[1]
+      
         # create map and marker cluster instances
-        my_map = GenMap(locations=locations.get_locations())
+        my_map = GenMap(locations=locations, links=links)
         my_map.gen_map()
         return render_template('map_locations.html')
 
@@ -65,4 +65,4 @@ app.add_url_rule('/about_page', view_func=AboutPage.as_view('about_page'))
 
 # Run
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
