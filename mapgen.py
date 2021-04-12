@@ -43,8 +43,6 @@ class GenMap:
         my_map.add_child(mc)
         # Save the Map Instance Into a HTML file
         my_map.save("templates/map_locations.html")
-        print("------------------------------------------")
-        print("Map Created! Check your files for templates/map_locations.html")
 
 
 if __name__ == "__main__":
