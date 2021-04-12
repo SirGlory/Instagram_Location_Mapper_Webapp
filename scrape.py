@@ -32,16 +32,9 @@ class Scrape:
             else:
                 pass
 
-
-        reversed_locs = locs[::-1]
-        reversed_links = links[::-1]
-        #print(locs)
-        #print(links)
-        #print(base_url)
-        return reversed_locs, reversed_links  # Revered location order. scraping puts newest first,
-        # return l            # but to plot journey we would want oldest post as starting point
-
-        
+        reversed_locs = locs[::-1]  # Revered location order. scraping puts newest first,
+        reversed_links = links[::-1] # but to plot journey we would want oldest post as starting point
+        return reversed_locs, reversed_links
 
 
 if __name__ == "__main__":
