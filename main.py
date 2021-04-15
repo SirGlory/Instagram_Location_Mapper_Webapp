@@ -4,15 +4,13 @@ from flask_mobility import Mobility
 from flask_mobility.decorators import mobilized
 from flask_styleguide import Styleguide
 from wtforms import Form, StringField, SubmitField
-
+from mapgen import GenMap
+from data_check import DataCheck
 
 # Create app instance
 app = Flask(__name__)
 styleguide = Styleguide(app)
 Mobility(app)
-
-from mapgen import GenMap
-from scrape import Scrape
 
 # Pages
 
@@ -30,16 +28,15 @@ class HomePage(MethodView):
 class MapPage(MethodView):
     # post input from home page
     def post(self):
-        # draw inputs, get handle, scrape location addresses
+        # draw inputs, get handle, scrape location addresses,
+
         handle_form = HandleForm(request.form)
         handle = str(handle_form.handle.data)
-        locations = Scrape(handle).get_locations()[0]
-        links = Scrape(handle).get_locations()[1]
-      
-        # create map and marker cluster instances
-        my_map = GenMap(locations=locations, links=links)
+        DataCheck(handle).db_check()
+        my_map = GenMap(handle=handle)
         my_map.gen_map()
-        return render_template('map_locations.html')
+        map_name=f"map_{handle}.html"
+        return render_template(map_name)
 
 
 class AboutPage(MethodView):
@@ -53,7 +50,7 @@ class AboutPage(MethodView):
 
 # Form
 class HandleForm(Form):
-    handle = StringField("Enter handle: @", default="4x4theboiz")
+    handle = StringField("Enter handle: @", default="travel")
     button = SubmitField("Generate Map")
     button_about = SubmitField("Learn More")
 
@@ -65,4 +62,4 @@ app.add_url_rule('/about_page', view_func=AboutPage.as_view('about_page'))
 
 # Run
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
