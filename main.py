@@ -33,7 +33,7 @@ class MapPage(MethodView):
         handle_form = HandleForm(request.form)
         handle = str(handle_form.handle.data)
         DataCheck(handle).db_check()
-        my_map = GenMap(handle=handle)
+        my_map = GenMap(handle)
         my_map.gen_map()
         map_name=f"map_{handle}.html"
         return render_template(map_name)
@@ -50,7 +50,7 @@ class AboutPage(MethodView):
 
 # Form
 class HandleForm(Form):
-    handle = StringField("Enter handle: @", default="travel")
+    handle = StringField("Enter handle: @", default="4x4theboiz")
     button = SubmitField("Generate Map")
     button_about = SubmitField("Learn More")
 
