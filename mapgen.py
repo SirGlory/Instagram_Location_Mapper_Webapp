@@ -21,7 +21,7 @@ class GenMap:
         if self.handle == "4x4theboiz":
             my_map = Map(location=[-25.25, 21.75], zoom_start=5)
         else:
-            my_map = Map(location=[0, 0], zoom_start=3)
+            my_map = Map(location=[0, 0], zoom_start=2)
         mc = MarkerCluster()
         coords = []
 
