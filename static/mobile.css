@@ -10,9 +10,10 @@ h2 {
      border: none;
 }
 h3 {
-    color: rgba(0, 136, 122, 0.9);
-    font-size: 2em;
-     border: none;
+    color: Black;
+    font-size: 0.8em;
+    border: none;
+    font-weight: normal;
 }
 h4 {
     font-size: 1.1em;
