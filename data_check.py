@@ -63,35 +63,7 @@ class DataCheck:
                         connection.close()
                         print("connection closed")
 
-                    # is up to date
-                    # else:
-                    #     print("Table up to date!")
-                    #     outdated = False
-                    #     connection.close()
-                    # except:
-                    #     print("Uh oh! we need to populate the table for the first time")
-                    #     # scrape latest data
-                    #     # print(handle)
-                    #     data = Scrape(self.handle).get_locations()
-                    #     locations = data[0]
-                    #     links = data[1]
-                    #     latitudes = data[2]
-                    #     longitudes = data[3]
-                    #     print(locations[0][0])
-                    #
-                    #     for i in range(0, len(locations), 1):
-                    #         # Convert address to coordinates
-                    #         try:
-                    #             connection = sqlite3.connect("posts.db")
-                    #             sql = f"""INSERT INTO `{self.handle}` (`location`,`link`,`latitude`,`longitude`) VALUES ("{locations[i]}","{links[i]}","{latitudes[i]}","{longitudes[i]}")"""
-                    #             print(sql)
-                    #             connection.execute(sql)
-                    #             connection.commit()
-                    #             print("Table populated")
-                    #             connection.close()
-                    #         except:
-                    #             pass
-                # Populate
+                        
                 except:
                     print("Uh oh! we need to populate the table for the first time")
 
