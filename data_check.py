@@ -21,8 +21,8 @@ class DataCheck:
                 connection.close()
                 # Try table read otherwise populate
                 try:
-                    print(result)
-                    print(result[-1])
+                    #print(result)
+                    #print(result[-1])
                     last_location_data = result[-1][0]
                     print(f"Database last recorded location: {last_location_data}")
 
@@ -45,12 +45,12 @@ class DataCheck:
                         links = data[1]
                         latitudes = data[2]
                         longitudes = data[3]
-                        print(locations[0])
+                        #print(locations[0])
                         connection = sqlite3.connect("posts.db")
                         for i in range(0, len(locations), 1):
                             try:
                                 sql = f"""INSERT INTO `{self.handle}` (`location`,`link`,`latitude`,`longitude`) VALUES ("{locations[i]}","{links[i]}","{latitudes[i]}","{longitudes[i]}")"""
-                                print(sql)
+                                #print(sql)
                                 connection.execute(sql)
                                 connection.commit()
                                 # print("Table populated")
@@ -76,12 +76,12 @@ class DataCheck:
                     links = data[1]
                     latitudes = data[2]
                     longitudes = data[3]
-                    print(locations[0])
+                    #print(locations[0])
                     connection = sqlite3.connect("posts.db")
                     for i in range(0, len(locations), 1):
                         try:
                             sql = f"""INSERT INTO `{self.handle}` (`location`,`link`,`latitude`,`longitude`) VALUES ("{locations[i]}","{links[i]}","{latitudes[i]}","{longitudes[i]}")"""
-                            print(sql)
+                            #print(sql)
                             connection.execute(sql)
                             connection.commit()
                             # print("Table populated")
@@ -95,7 +95,7 @@ class DataCheck:
                 print("table needs to be created")
                 # create table
                 sql = f"""CREATE TABLE "{self.handle}" ("location" REAL UNIQUE, "link" REAL UNIQUE, "latitude" REAL UNIQUE, "longitude" REAL UNIQUE);"""
-                print(sql)
+                #print(sql)
                 connection = sqlite3.connect("posts.db")
                 connection.execute(sql)
                 connection.commit()
