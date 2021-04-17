@@ -20,6 +20,18 @@ class GenMap:
         # Generate map, cluster class and create empty coordinates list
         if self.handle == "4x4theboiz":
             my_map = Map(location=[-25.25, 21.75], zoom_start=5)
+        elif self.handle == "teampolarsteps":
+            my_map = Map(location=[42.25, 30], zoom_start=3)
+        elif self.handle == "cityofcapetown":
+            my_map = Map(location=[-33.95, 18.420], zoom_start=12)
+        elif self.handle == "backpackingtours":
+            my_map = Map(location=[23.88, 90], zoom_start=2)
+        elif self.handle == "photos":
+            my_map = Map(location=[46.88, 54.35], zoom_start=2)
+        elif self.handle == "rolling_sloane":
+            my_map = Map(location=[18, 13], zoom_start=3)
+        elif self.handle == "cape_secrets":
+            my_map = Map(location=[-14, 25], zoom_start=4)
         else:
             my_map = Map(location=[0, 0], zoom_start=2)
         mc = MarkerCluster()

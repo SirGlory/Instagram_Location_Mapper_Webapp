@@ -38,6 +38,9 @@ class MapPage(MethodView):
         map_name=f"map_{handle}.html"
         return render_template(map_name)
 
+@app.route('/map_page/<handle>', methods=['GET'])
+def handles(handle):
+  return render_template(f"map_{handle}.html", title='Animal Details', handle=handle)
 
 class AboutPage(MethodView):
 
