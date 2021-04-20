@@ -1,48 +1,69 @@
+import sqlite3
 from folium import Map, PolyLine, Marker, Popup
 from folium.plugins import MarkerCluster
-from geopy.geocoders import Nominatim
-
 
 class GenMap:
 
-    def __init__(self, locations):
-        self.locations = locations
-        print(locations)
+    def __init__(self, handle):
+        self.handle = handle
+
 
     def gen_map(self):
+        # read database
+        connection = sqlite3.connect("posts.db")
+        cursor = connection.cursor()
+        sql = f"""SELECT * FROM "{self.handle}" """
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        connection.close()
+
         # Generate map, cluster class and create empty coordinates list
-        my_map = Map(location=[-22.5, 24], zoom_start=4)
+        if self.handle == "4x4theboiz":
+            my_map = Map(location=[-25.25, 21.2], zoom_start=5)
+        elif self.handle == "teampolarsteps":
+            my_map = Map(location=[52.35, 5.3], zoom_start=9)
+        elif self.handle == "cityofcapetown":
+            my_map = Map(location=[-33.95, 18.420], zoom_start=12)
+        elif self.handle == "backpackingtours":
+            my_map = Map(location=[10, 100], zoom_start=3)
+        elif self.handle == "photos":
+            my_map = Map(location=[46.88, 54.35], zoom_start=2)
+        elif self.handle == "rolling_sloane":
+            my_map = Map(location=[55, 2.64], zoom_start=4)
+        elif self.handle == "cape_secrets":
+            my_map = Map(location=[-34, 18.9], zoom_start=8)
+        else:
+            my_map = Map(location=[0, 0], zoom_start=2)
         mc = MarkerCluster()
         coords = []
 
+
         # For each location convert address to coordinates, create popup and marker,
         # add to marker cluster
-        for i in range(0, len(self.locations), 1):
-            # Convert address to coordinates
-            locator = Nominatim(user_agent="myGeocoder")
-            try:
-                locationi = locator.geocode(self.locations[i])
-                lat = locationi.latitude
-                lon = locationi.longitude
-                lat_lon = (lat, lon)
-                p = Popup(self.locations[i], max_width=400)
-                mk = Marker([lat, lon], p)
-                mc.add_child(mk)
-                coords.append(lat_lon)
-            except:
-                pass
+        for i in range(0, len(result), 1):
+
+            popup_content = f"{result[i][0]} <br> " \
+                            f"<a href={result[i][1]} > See Post"
+            p = Popup(popup_content, max_width=400)
+            mk = Marker([result[i][2], result[i][3]], p)
+            mc.add_child(mk)
+            lat_lon = (result[i][2], result[i][3])
+            coords.append(lat_lon)
 
         # Add Polyline with coords
-        polyline = PolyLine(coords, color="red", weight=2, opacity=0.7)
-        polyline.add_to(my_map)
+        if self.handle == "4x4theboiz":
+            polyline = PolyLine(coords, color="red", weight=2, opacity=0.7)
+            polyline.add_to(my_map)
+        else:
+            pass
         # Add Marker Cluster with mc
         my_map.add_child(mc)
         # Save the Map Instance Into a HTML file
-        my_map.save("templates/map_locations.html")
-        print("------------------------------------------")
-        print("Map Created! Check your files for templates/map_locations.html")
+        map_name = f"templates/map_{self.handle}.html"
+        my_map.save(map_name)
 
 
 if __name__ == "__main__":
-    c = GenMap(['Midrand, Gauteng'])
+    handle = "4x4theboiz"
+    c = GenMap(handle)
     c.gen_map()

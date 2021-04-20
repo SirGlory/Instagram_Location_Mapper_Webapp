@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b4c47490e5154c55812dc995147afac1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_b4c47490e5154c55812dc995147afac1" ></div>
+        
+</body>
+<script>    
+    
+            var map_b4c47490e5154c55812dc995147afac1 = L.map(
+                "map_b4c47490e5154c55812dc995147afac1",
+                {
+                    center: [52.35, 5.3],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2921d6223bdf4319833f9ea6d2257ecc = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b4c47490e5154c55812dc995147afac1);
+        
+    
+            var marker_cluster_d6405c695014444aa6d6b6ef42ab34f6 = L.markerClusterGroup(
+                {}
+            );
+            map_b4c47490e5154c55812dc995147afac1.addLayer(marker_cluster_d6405c695014444aa6d6b6ef42ab34f6);
+        
+    
+            var marker_6002c89943684f4799cb794a7078242a = L.marker(
+                [17.2960426, -62.7241092],
+                {}
+            ).addTo(marker_cluster_d6405c695014444aa6d6b6ef42ab34f6);
+        
+    
+        var popup_11b41a47ae5e4091badee03e10e73822 = L.popup({"maxWidth": 400});
+
+        
+            var html_b22cfdb56c4543a5a0d714f1c96cd2eb = $(`<div id="html_b22cfdb56c4543a5a0d714f1c96cd2eb" style="width: 100.0%; height: 100.0%;">Travel The World <br> <a href=https://www.picuki.com/media/2364706437060842883 > See Post</div>`)[0];
+            popup_11b41a47ae5e4091badee03e10e73822.setContent(html_b22cfdb56c4543a5a0d714f1c96cd2eb);
+        
+
+        marker_6002c89943684f4799cb794a7078242a.bindPopup(popup_11b41a47ae5e4091badee03e10e73822)
+        ;
+
+        
+    
+    
+            var marker_736a6c7261c74a178dd6cd671357bb26 = L.marker(
+                [52.3578866, 4.867116659586616],
+                {}
+            ).addTo(marker_cluster_d6405c695014444aa6d6b6ef42ab34f6);
+        
+    
+        var popup_391eed352b624428b051864b0bf99c32 = L.popup({"maxWidth": 400});
+
+        
+            var html_61ff885dd3c848a8b66478e2c9c51a47 = $(`<div id="html_61ff885dd3c848a8b66478e2c9c51a47" style="width: 100.0%; height: 100.0%;">Vondelpark, Amsterdam <br> <a href=https://www.picuki.com/media/2370365663556844327 > See Post</div>`)[0];
+            popup_391eed352b624428b051864b0bf99c32.setContent(html_61ff885dd3c848a8b66478e2c9c51a47);
+        
+
+        marker_736a6c7261c74a178dd6cd671357bb26.bindPopup(popup_391eed352b624428b051864b0bf99c32)
+        ;
+
+        
+    
+    
+            var marker_816211f458754680af81f366b54b65e6 = L.marker(
+                [52.080985600000005, 5.12768396945229],
+                {}
+            ).addTo(marker_cluster_d6405c695014444aa6d6b6ef42ab34f6);
+        
+    
+        var popup_2485de2972364d938b4569a064ae1140 = L.popup({"maxWidth": 400});
+
+        
+            var html_a6d51f1470284967a8d7cf289760a96d = $(`<div id="html_a6d51f1470284967a8d7cf289760a96d" style="width: 100.0%; height: 100.0%;">Utrecht, Netherlands <br> <a href=https://www.picuki.com/media/2384227489897858797 > See Post</div>`)[0];
+            popup_2485de2972364d938b4569a064ae1140.setContent(html_a6d51f1470284967a8d7cf289760a96d);
+        
+
+        marker_816211f458754680af81f366b54b65e6.bindPopup(popup_2485de2972364d938b4569a064ae1140)
+        ;
+
+        
+    
+    
+            var marker_8876d976f80e4f47b85a5f6c4eddfb31 = L.marker(
+                [52.3727598, 4.8936041],
+                {}
+            ).addTo(marker_cluster_d6405c695014444aa6d6b6ef42ab34f6);
+        
+    
+        var popup_817989c45f5c4f978f60037a167ce05d = L.popup({"maxWidth": 400});
+
+        
+            var html_c9f6eb4e6f5f435fa854d5cd5394772b = $(`<div id="html_c9f6eb4e6f5f435fa854d5cd5394772b" style="width: 100.0%; height: 100.0%;">Amsterdam, Netherlands <br> <a href=https://www.picuki.com/media/2469807089746669629 > See Post</div>`)[0];
+            popup_817989c45f5c4f978f60037a167ce05d.setContent(html_c9f6eb4e6f5f435fa854d5cd5394772b);
+        
+
+        marker_8876d976f80e4f47b85a5f6c4eddfb31.bindPopup(popup_817989c45f5c4f978f60037a167ce05d)
+        ;
+
+        
+    
+    
+            var marker_2d0316d23f80482aac0108c881cfda7b = L.marker(
+                [52.5001698, 5.7480821],
+                {}
+            ).addTo(marker_cluster_d6405c695014444aa6d6b6ef42ab34f6);
+        
+    
+        var popup_646b380fdb7d409b8f2e4d3d4dbe5692 = L.popup({"maxWidth": 400});
+
+        
+            var html_993311339501418e89bc51ddc793d044 = $(`<div id="html_993311339501418e89bc51ddc793d044" style="width: 100.0%; height: 100.0%;">Netherlands <br> <a href=https://www.picuki.com/media/2471323554257792426 > See Post</div>`)[0];
+            popup_646b380fdb7d409b8f2e4d3d4dbe5692.setContent(html_993311339501418e89bc51ddc793d044);
+        
+
+        marker_2d0316d23f80482aac0108c881cfda7b.bindPopup(popup_646b380fdb7d409b8f2e4d3d4dbe5692)
+        ;
+
+        
+    
+    
+            var marker_49fcce327c9a47c99007e863f6dbeb87 = L.marker(
+                [46.9599823, 22.0541733],
+                {}
+            ).addTo(marker_cluster_d6405c695014444aa6d6b6ef42ab34f6);
+        
+    
+        var popup_e308847b7ac146cd929530b3f4fcfbd1 = L.popup({"maxWidth": 400});
+
+        
+            var html_5224fa15f92d4b93b265f80e8001f3ea = $(`<div id="html_5224fa15f92d4b93b265f80e8001f3ea" style="width: 100.0%; height: 100.0%;">Everywhere <br> <a href=https://www.picuki.com/media/2532722989667306261 > See Post</div>`)[0];
+            popup_e308847b7ac146cd929530b3f4fcfbd1.setContent(html_5224fa15f92d4b93b265f80e8001f3ea);
+        
+
+        marker_49fcce327c9a47c99007e863f6dbeb87.bindPopup(popup_e308847b7ac146cd929530b3f4fcfbd1)
+        ;
+
+        
+    
+    
+            var marker_0180e8d6f6604aa58b1323e398c8ce6b = L.marker(
+                [25.2528888, 55.17696777178696],
+                {}
+            ).addTo(marker_cluster_d6405c695014444aa6d6b6ef42ab34f6);
+        
+    
+        var popup_8e0066d1e5c54ca499133c9ef5fe8e37 = L.popup({"maxWidth": 400});
+
+        
+            var html_9053243bd1f14aaea16b51504f57147c = $(`<div id="html_9053243bd1f14aaea16b51504f57147c" style="width: 100.0%; height: 100.0%;">World <br> <a href=https://www.picuki.com/media/2542254476594817363 > See Post</div>`)[0];
+            popup_8e0066d1e5c54ca499133c9ef5fe8e37.setContent(html_9053243bd1f14aaea16b51504f57147c);
+        
+
+        marker_0180e8d6f6604aa58b1323e398c8ce6b.bindPopup(popup_8e0066d1e5c54ca499133c9ef5fe8e37)
+        ;
+
+        
+    
+</script>

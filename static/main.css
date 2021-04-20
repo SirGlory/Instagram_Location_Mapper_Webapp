@@ -1,41 +1,54 @@
+h1 {
+    color: #00887A;
+    font-size: 3em;
+    border: none;
+    padding: 0em;
+    margin: 0.5em;
+}
+
 h2 {
     color: #00887A;
-    text-align: center;
-    font-size: 3em;
-    padding: 0.5em;
+    font-size: 2em;
      border: none;
 }
 h3 {
     color: rgba(0, 136, 122, 0.9);
-    text-align: center;
     font-size: 1.25em;
     padding: 0.2em;
      border: none;
 }
 h4 {
-    font-size: 1.75em;
-    text-align: center;
+    font-size: 1.5em;
     color: #17252A:
     padding: 0.2em;
+    margin: 0.2em;
 }
-
 p {
-    font-size: 1.1em;
+    font-size: 1em;
     text-align: center;
+    padding: 0em 2em;
+    margin: 0.5em;
+}
+h6 {
+    color: #00887A;
+    font-size: 0.95em;
+    text-align: center;
+    padding: 0em 3em;
+    margin: 0.5em;
 }
 hr {
     color: #DEF2F1;
 }
 
 input[type=text] {
-    width: auto;
+    width: 15%;
     padding: 0.75em 0.75em;
     margin: 1em 0;
     color: #1d3557;
     background-color: #DEF2F1;
     border-radius: 0.5em;
-    font-size: 1.1em;
-    min-width: 20%;
+    font-size: 1em;
+    min-width: 10%;
     max-width: 25%
 }
 
@@ -46,20 +59,34 @@ input[type=submit] {
     border: 0.2em;
     border-radius: 0.5em;
     background-color: #00887A;
-    font-size: 1.1em;
+    font-size: 1em;
     transition-duration: 0.4s;
-    min-width: 40%;
+    min-width: 30%;
     max-width: 50%;
 }
 
 input[type=submit]:hover {
-    background-color: rgba(0, 136, 122, 0.82);
+    background-color: rgba(0, 136, 122, 0.75);
     color: Black;
     cursor: pointer
 }
 
 input[type=submit]:focus{
     cursor: wait
+}
+
+input[type=submit].altbtns {
+    width: auto;
+    color: White;
+    font-size: 1em;
+    font-weight: 1em;
+    padding: 1em 1em;
+    margin: 1em;
+    border: 0.2em;
+    border-radius: 0.5em;
+    background-color: Black;
+    min-width: 20%;
+    max-width: 40%;
 }
 
 body {
@@ -71,5 +98,5 @@ body {
     color: Black
 }
 form {
-    font-size: 1.25em;
+    font-size: 1.1em;
 }

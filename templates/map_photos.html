@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9f866c33f531446eac63ab8bddc684e7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9f866c33f531446eac63ab8bddc684e7" ></div>
+        
+</body>
+<script>    
+    
+            var map_9f866c33f531446eac63ab8bddc684e7 = L.map(
+                "map_9f866c33f531446eac63ab8bddc684e7",
+                {
+                    center: [46.88, 54.35],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_40172ec4bb8f4e21888cbc62be105741 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9f866c33f531446eac63ab8bddc684e7);
+        
+    
+            var marker_cluster_af076f2fbf33409ca1ce7524daa0b07e = L.markerClusterGroup(
+                {}
+            );
+            map_9f866c33f531446eac63ab8bddc684e7.addLayer(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+            var marker_e42f0817422e487aa016aa7af956da06 = L.marker(
+                [7.9366015, 98.3529292],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_5fd3002426ad4c23959b5337515ee777 = L.popup({"maxWidth": 400});
+
+        
+            var html_9441d4a0b3154071ad365b467550b6fb = $(`<div id="html_9441d4a0b3154071ad365b467550b6fb" style="width: 100.0%; height: 100.0%;">Phuket, Thailand <br> <a href=https://www.picuki.com/media/2547375456077059143 > See Post</div>`)[0];
+            popup_5fd3002426ad4c23959b5337515ee777.setContent(html_9441d4a0b3154071ad365b467550b6fb);
+        
+
+        marker_e42f0817422e487aa016aa7af956da06.bindPopup(popup_5fd3002426ad4c23959b5337515ee777)
+        ;
+
+        
+    
+    
+            var marker_ab8d7aead1214ef58d034408484f9fdf = L.marker(
+                [69.30405, 17.45915887912413],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_cb608dce184141e49a085629df6b9be2 = L.popup({"maxWidth": 400});
+
+        
+            var html_5cc90909ab1f4f56b6fad2a4734a105c = $(`<div id="html_5cc90909ab1f4f56b6fad2a4734a105c" style="width: 100.0%; height: 100.0%;">Senja <br> <a href=https://www.picuki.com/media/2547538551974089182 > See Post</div>`)[0];
+            popup_cb608dce184141e49a085629df6b9be2.setContent(html_5cc90909ab1f4f56b6fad2a4734a105c);
+        
+
+        marker_ab8d7aead1214ef58d034408484f9fdf.bindPopup(popup_cb608dce184141e49a085629df6b9be2)
+        ;
+
+        
+    
+    
+            var marker_ae54310750744a89b7255d154926b473 = L.marker(
+                [36.6217431, 29.1209488],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_bb6682db7fcb412e8b968e646cf8bbed = L.popup({"maxWidth": 400});
+
+        
+            var html_1cf4cc9aac0545e59a5b82b8d90bc531 = $(`<div id="html_1cf4cc9aac0545e59a5b82b8d90bc531" style="width: 100.0%; height: 100.0%;">Fethiye, Turkey <br> <a href=https://www.picuki.com/media/2548802005397543033 > See Post</div>`)[0];
+            popup_bb6682db7fcb412e8b968e646cf8bbed.setContent(html_1cf4cc9aac0545e59a5b82b8d90bc531);
+        
+
+        marker_ae54310750744a89b7255d154926b473.bindPopup(popup_bb6682db7fcb412e8b968e646cf8bbed)
+        ;
+
+        
+    
+    
+            var marker_086ab2df0b49470d86cb22188f6ed597 = L.marker(
+                [41.1018669, -81.1515962],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_98ce54a1c7a9451da9fd862d51c73bb1 = L.popup({"maxWidth": 400});
+
+        
+            var html_e64e216694414ff3af941115c1f87c04 = $(`<div id="html_e64e216694414ff3af941115c1f87c04" style="width: 100.0%; height: 100.0%;">Planet Earth <br> <a href=https://www.picuki.com/media/2549537849007766162 > See Post</div>`)[0];
+            popup_98ce54a1c7a9451da9fd862d51c73bb1.setContent(html_e64e216694414ff3af941115c1f87c04);
+        
+
+        marker_086ab2df0b49470d86cb22188f6ed597.bindPopup(popup_98ce54a1c7a9451da9fd862d51c73bb1)
+        ;
+
+        
+    
+    
+            var marker_412351184ea141289f501721fbc4e051 = L.marker(
+                [35.021041, 135.7556075],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_8ee27c5a801441c3b96035ef1fc5fea2 = L.popup({"maxWidth": 400});
+
+        
+            var html_1db44d55d75942b29e9f97c09b83d2a8 = $(`<div id="html_1db44d55d75942b29e9f97c09b83d2a8" style="width: 100.0%; height: 100.0%;">Kyoto, Japan <br> <a href=https://www.picuki.com/media/2550254633641883427 > See Post</div>`)[0];
+            popup_8ee27c5a801441c3b96035ef1fc5fea2.setContent(html_1db44d55d75942b29e9f97c09b83d2a8);
+        
+
+        marker_412351184ea141289f501721fbc4e051.bindPopup(popup_8ee27c5a801441c3b96035ef1fc5fea2)
+        ;
+
+        
+    
+    
+            var marker_9cb4ba479cad4b0bab907d1d8db01298 = L.marker(
+                [36.5748441, 139.2394179],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_c4d288c915e84395a230fdad692a39ea = L.popup({"maxWidth": 400});
+
+        
+            var html_2971cffbc5f946b9935a168341e6957f = $(`<div id="html_2971cffbc5f946b9935a168341e6957f" style="width: 100.0%; height: 100.0%;">Japan <br> <a href=https://www.picuki.com/media/2550991851658549149 > See Post</div>`)[0];
+            popup_c4d288c915e84395a230fdad692a39ea.setContent(html_2971cffbc5f946b9935a168341e6957f);
+        
+
+        marker_9cb4ba479cad4b0bab907d1d8db01298.bindPopup(popup_c4d288c915e84395a230fdad692a39ea)
+        ;
+
+        
+    
+    
+            var marker_28c7b2a9f4bc41a5a8e53fd3a7a22eed = L.marker(
+                [33.6981486, -117.7460817],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_78970f8356bf47d7a695be2a77fde027 = L.popup({"maxWidth": 400});
+
+        
+            var html_13938ef0444a49ab9c620e350d8e337b = $(`<div id="html_13938ef0444a49ab9c620e350d8e337b" style="width: 100.0%; height: 100.0%;">Nature <br> <a href=https://www.picuki.com/media/2551698252085186888 > See Post</div>`)[0];
+            popup_78970f8356bf47d7a695be2a77fde027.setContent(html_13938ef0444a49ab9c620e350d8e337b);
+        
+
+        marker_28c7b2a9f4bc41a5a8e53fd3a7a22eed.bindPopup(popup_78970f8356bf47d7a695be2a77fde027)
+        ;
+
+        
+    
+    
+            var marker_863fe72a9bc846668f0d4906896c5247 = L.marker(
+                [-35.05686625, 150.72630012641693],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_53ff5f6b79b548b6971042bcc1593cdb = L.popup({"maxWidth": 400});
+
+        
+            var html_fac8ededaef1413091acebd458f5564f = $(`<div id="html_fac8ededaef1413091acebd458f5564f" style="width: 100.0%; height: 100.0%;">Jervis Bay NSW Australia <br> <a href=https://www.picuki.com/media/2552446453037920409 > See Post</div>`)[0];
+            popup_53ff5f6b79b548b6971042bcc1593cdb.setContent(html_fac8ededaef1413091acebd458f5564f);
+        
+
+        marker_863fe72a9bc846668f0d4906896c5247.bindPopup(popup_53ff5f6b79b548b6971042bcc1593cdb)
+        ;
+
+        
+    
+    
+            var marker_fc7b6ff19998406a9bfc106bdcddacb0 = L.marker(
+                [46.603354, 1.8883335],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_7f6af9c0d37140d2bedfca41cda283a7 = L.popup({"maxWidth": 400});
+
+        
+            var html_65bde329fdf84ec7ae967da5ed3765a4 = $(`<div id="html_65bde329fdf84ec7ae967da5ed3765a4" style="width: 100.0%; height: 100.0%;">France <br> <a href=https://www.picuki.com/media/2553165951797784203 > See Post</div>`)[0];
+            popup_7f6af9c0d37140d2bedfca41cda283a7.setContent(html_65bde329fdf84ec7ae967da5ed3765a4);
+        
+
+        marker_fc7b6ff19998406a9bfc106bdcddacb0.bindPopup(popup_7f6af9c0d37140d2bedfca41cda283a7)
+        ;
+
+        
+    
+    
+            var marker_1d4101801c3f4ef49aadbc5604aaba6a = L.marker(
+                [37.84054795, -119.51658779802511],
+                {}
+            ).addTo(marker_cluster_af076f2fbf33409ca1ce7524daa0b07e);
+        
+    
+        var popup_c0587bfa6e5b4a68aaca9822c7b14a13 = L.popup({"maxWidth": 400});
+
+        
+            var html_9c123705ae3c42818093938ec8f39e95 = $(`<div id="html_9c123705ae3c42818093938ec8f39e95" style="width: 100.0%; height: 100.0%;">Yosemite National Park <br> <a href=https://www.picuki.com/media/2553895456640238443 > See Post</div>`)[0];
+            popup_c0587bfa6e5b4a68aaca9822c7b14a13.setContent(html_9c123705ae3c42818093938ec8f39e95);
+        
+
+        marker_1d4101801c3f4ef49aadbc5604aaba6a.bindPopup(popup_c0587bfa6e5b4a68aaca9822c7b14a13)
+        ;
+
+        
+    
+</script>
