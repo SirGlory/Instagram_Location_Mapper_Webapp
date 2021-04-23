@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_28bdb1d7277f4c08a4f4f8e94b36784a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_28bdb1d7277f4c08a4f4f8e94b36784a" ></div>
+        
+</body>
+<script>    
+    
+            var map_28bdb1d7277f4c08a4f4f8e94b36784a = L.map(
+                "map_28bdb1d7277f4c08a4f4f8e94b36784a",
+                {
+                    center: [38.5, -2.75],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a3be44c9b7534e95aea9f7b3da3077ef = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_28bdb1d7277f4c08a4f4f8e94b36784a);
+        
+    
+            var marker_cluster_933c809f05ff4bbe8c5bb457c272a8be = L.markerClusterGroup(
+                {}
+            );
+            map_28bdb1d7277f4c08a4f4f8e94b36784a.addLayer(marker_cluster_933c809f05ff4bbe8c5bb457c272a8be);
+        
+    
+            var marker_a3d5c32ff87a434d86404d2e2e44a87e = L.marker(
+                [36.9089333, -4.7599708],
+                {}
+            ).addTo(marker_cluster_933c809f05ff4bbe8c5bb457c272a8be);
+        
+    
+        var popup_632a3ff40e1e4728bb501d888469d99d = L.popup({"maxWidth": 400});
+
+        
+            var html_7c2e0322533246f19b6fbdb490c1513e = $(`<div id="html_7c2e0322533246f19b6fbdb490c1513e" style="width: 100.0%; height: 100.0%;">El Chorro, Andalucia, Spain <br> <a href=https://www.picuki.com/media/2543694288432159765 > See Post</div>`)[0];
+            popup_632a3ff40e1e4728bb501d888469d99d.setContent(html_7c2e0322533246f19b6fbdb490c1513e);
+        
+
+        marker_a3d5c32ff87a434d86404d2e2e44a87e.bindPopup(popup_632a3ff40e1e4728bb501d888469d99d)
+        ;
+
+        
+    
+    
+            var marker_97cc6de02b364c0a8cc8d06f0d0e382e = L.marker(
+                [37.118565, -2.5395634],
+                {}
+            ).addTo(marker_cluster_933c809f05ff4bbe8c5bb457c272a8be);
+        
+    
+        var popup_9e3f9f7a1ef84c198b83601c66a31fc6 = L.popup({"maxWidth": 400});
+
+        
+            var html_7ae30cef0e164c608de534018babf811 = $(`<div id="html_7ae30cef0e164c608de534018babf811" style="width: 100.0%; height: 100.0%;">Gérgal, Spain <br> <a href=https://www.picuki.com/media/2546478718095942472 > See Post</div>`)[0];
+            popup_9e3f9f7a1ef84c198b83601c66a31fc6.setContent(html_7ae30cef0e164c608de534018babf811);
+        
+
+        marker_97cc6de02b364c0a8cc8d06f0d0e382e.bindPopup(popup_9e3f9f7a1ef84c198b83601c66a31fc6)
+        ;
+
+        
+    
+    
+            var marker_a88e4e32fb8140cc9310fe4414cebea0 = L.marker(
+                [37.4795311, -3.0432324],
+                {}
+            ).addTo(marker_cluster_933c809f05ff4bbe8c5bb457c272a8be);
+        
+    
+        var popup_5f48590fceff4d4a884efcfa15ac2f44 = L.popup({"maxWidth": 400});
+
+        
+            var html_1edb9f44e38141e299870bc49821de37 = $(`<div id="html_1edb9f44e38141e299870bc49821de37" style="width: 100.0%; height: 100.0%;">Gorafe, Andalucia, Spain <br> <a href=https://www.picuki.com/media/2550183163400897538 > See Post</div>`)[0];
+            popup_5f48590fceff4d4a884efcfa15ac2f44.setContent(html_1edb9f44e38141e299870bc49821de37);
+        
+
+        marker_a88e4e32fb8140cc9310fe4414cebea0.bindPopup(popup_5f48590fceff4d4a884efcfa15ac2f44)
+        ;
+
+        
+    
+    
+            var marker_185fdb7cb3de4752b568b7d598034d57 = L.marker(
+                [39.3260685, -4.8379791],
+                {}
+            ).addTo(marker_cluster_933c809f05ff4bbe8c5bb457c272a8be);
+        
+    
+        var popup_383948c8da88418bb2abc2d75c1ece04 = L.popup({"maxWidth": 400});
+
+        
+            var html_572518d962ab411e915800e08838f951 = $(`<div id="html_572518d962ab411e915800e08838f951" style="width: 100.0%; height: 100.0%;">Spain <br> <a href=https://www.picuki.com/media/2552502234666722309 > See Post</div>`)[0];
+            popup_383948c8da88418bb2abc2d75c1ece04.setContent(html_572518d962ab411e915800e08838f951);
+        
+
+        marker_185fdb7cb3de4752b568b7d598034d57.bindPopup(popup_383948c8da88418bb2abc2d75c1ece04)
+        ;
+
+        
+    
+    
+            var marker_5e43bd72712b40c0825077416b7bce3b = L.marker(
+                [39.2299883, -1.0619387],
+                {}
+            ).addTo(marker_cluster_933c809f05ff4bbe8c5bb457c272a8be);
+        
+    
+        var popup_7291fd319aaa40b39919ec70831997d5 = L.popup({"maxWidth": 400});
+
+        
+            var html_29ef4a32b43e4e308fb85bef94b6c4bc = $(`<div id="html_29ef4a32b43e4e308fb85bef94b6c4bc" style="width: 100.0%; height: 100.0%;">Cofrentes <br> <a href=https://www.picuki.com/media/2558151762270796900 > See Post</div>`)[0];
+            popup_7291fd319aaa40b39919ec70831997d5.setContent(html_29ef4a32b43e4e308fb85bef94b6c4bc);
+        
+
+        marker_5e43bd72712b40c0825077416b7bce3b.bindPopup(popup_7291fd319aaa40b39919ec70831997d5)
+        ;
+
+        
+    
+    
+            var marker_cffddfd4b79a4635ae52966f3fdaf815 = L.marker(
+                [40.0223607, -0.2785144],
+                {}
+            ).addTo(marker_cluster_933c809f05ff4bbe8c5bb457c272a8be);
+        
+    
+        var popup_4447c2a7854a4489b15ceabda7a84762 = L.popup({"maxWidth": 400});
+
+        
+            var html_e40ae224198b4d66b27d376fae3f2967 = $(`<div id="html_e40ae224198b4d66b27d376fae3f2967" style="width: 100.0%; height: 100.0%;">Ribesalbes, Valenciana, Spain <br> <a href=https://www.picuki.com/media/2558174661753126628 > See Post</div>`)[0];
+            popup_4447c2a7854a4489b15ceabda7a84762.setContent(html_e40ae224198b4d66b27d376fae3f2967);
+        
+
+        marker_cffddfd4b79a4635ae52966f3fdaf815.bindPopup(popup_4447c2a7854a4489b15ceabda7a84762)
+        ;
+
+        
+    
+</script>

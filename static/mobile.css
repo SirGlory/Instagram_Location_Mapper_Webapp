@@ -35,11 +35,12 @@ p {
     padding: 0em 2em;
     margin: 0.75em;
 }
+
 h6 {
     color: #00887A;
-    font-size: 0.7em;
+    font-size: 0.8em;
     text-align: center;
-    padding: 0em 3em;
+    padding: 0.4em 3em;
     margin: 0.5em;
 }
 hr {

@@ -26,12 +26,13 @@ class GenMap:
             my_map = Map(location=[-34.1, 18.420], zoom_start=10)
         elif self.handle == "backpackingtours":
             my_map = Map(location=[10, 100], zoom_start=3)
-        elif self.handle == "photos":
-            my_map = Map(location=[46.88, 54.35], zoom_start=2)
+        elif self.handle == "tony_ontheroad":
+            my_map = Map(location=[38.5, -2.75], zoom_start=6)
         elif self.handle == "rolling_sloane":
             my_map = Map(location=[55, 2.64], zoom_start=4)
         elif self.handle == "cape_secrets":
             my_map = Map(location=[-33.4, 18.8], zoom_start=8)
+
         else:
             my_map = Map(location=[0, 0], zoom_start=2)
         mc = MarkerCluster()
