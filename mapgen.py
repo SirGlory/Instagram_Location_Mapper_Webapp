@@ -23,7 +23,7 @@ class GenMap:
         elif self.handle == "teampolarsteps":
             my_map = Map(location=[52.35, 5.3], zoom_start=9)
         elif self.handle == "cityofcapetown":
-            my_map = Map(location=[-33.95, 18.420], zoom_start=12)
+            my_map = Map(location=[-34.1, 18.420], zoom_start=10)
         elif self.handle == "backpackingtours":
             my_map = Map(location=[10, 100], zoom_start=3)
         elif self.handle == "photos":
@@ -31,7 +31,7 @@ class GenMap:
         elif self.handle == "rolling_sloane":
             my_map = Map(location=[55, 2.64], zoom_start=4)
         elif self.handle == "cape_secrets":
-            my_map = Map(location=[-34, 18.9], zoom_start=8)
+            my_map = Map(location=[-33.4, 18.8], zoom_start=8)
         else:
             my_map = Map(location=[0, 0], zoom_start=2)
         mc = MarkerCluster()
