@@ -52,7 +52,7 @@ class GenMap:
             coords.append(lat_lon)
 
         # Add Polyline with coords
-        if self.handle == "4x4theboiz" or "tony_ontheroad":
+        if self.handle == "4x4theboiz":
             polyline = PolyLine(coords, color="red", weight=2, opacity=0.7)
             polyline.add_to(my_map)
         else:
