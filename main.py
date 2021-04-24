@@ -12,6 +12,7 @@ app = Flask(__name__)
 styleguide = Styleguide(app)
 Mobility(app)
 
+
 # Pages
 
 class HomePage(MethodView):
@@ -19,10 +20,10 @@ class HomePage(MethodView):
     def get(self):
         handle_form = HandleForm()
         return render_template('home.html', handleform=handle_form)
-    @mobilized(get)
-    def get(self):
-        handle_form = HandleForm()
-        return render_template('home_mob.html', handleform=handle_form)
+    # @mobilized(get)
+    # def get(self):
+    #     handle_form = HandleForm()
+    #     return render_template('home_mob.html', handleform=handle_form)
 
 
 class MapPage(MethodView):
@@ -35,21 +36,24 @@ class MapPage(MethodView):
         DataCheck(handle).db_check()
         my_map = GenMap(handle)
         my_map.gen_map()
-        map_name=f"map_{handle}.html"
+        map_name = f"map_{handle}.html"
         return render_template(map_name)
+
 
 @app.route('/map_page/<handle>', methods=['GET'])
 def handles(handle):
-  return render_template(f"map_{handle}.html", title='Animal Details', handle=handle)
+    return render_template(f"map_{handle}.html", title='Animal Details', handle=handle)
+
 
 class AboutPage(MethodView):
 
     def get(self):
         return render_template('about.html')
 
-    @mobilized(get)
-    def get(self):
-        return render_template('about_mob.html')
+    # @mobilized(get)
+    # def get(self):
+    #     return render_template('about_mob.html')
+
 
 # Form
 class HandleForm(Form):
